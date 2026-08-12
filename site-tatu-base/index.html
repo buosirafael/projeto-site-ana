@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tatu Agronegócios</title>
+<style>
+  :root{
+    --brown-dark:#2b1c12;
+    --brown:#3d2914;
+    --brown-text:#3d2914;
+    --green:#0f7a5c;
+    --green-dark:#0c6249;
+    --bg:#ffffff;
+    --bg-muted:#f5f5f3;
+    --border:#e6e2dc;
+    --text-muted:#6b6258;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:"Poppins","Open Sans",Arial,sans-serif;
+    color:var(--brown-text);
+    background:var(--bg);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{text-decoration:none;color:inherit;}
+  img{max-width:100%;display:block;}
+  .container{max-width:1240px;margin:0 auto;padding:0 24px;}
+
+  /* Announcement bar */
+  .announcement{
+    background:var(--green);
+    color:#fff;
+    text-align:center;
+    font-size:14px;
+    font-weight:600;
+    padding:10px 16px;
+    letter-spacing:.2px;
+  }
+
+  /* Header */
+  header.main{
+    padding:20px 0;
+    border-bottom:1px solid var(--border);
+  }
+  .header-row{
+    display:flex;
+    align-items:center;
+    gap:24px;
+  }
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-shrink:0;
+    font-weight:800;
+    font-size:26px;
+    letter-spacing:2px;
+    color:var(--brown-dark);
+  }
+  .logo .badge{
+    width:44px;height:44px;border-radius:50%;
+    background:var(--brown-dark);
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-size:18px;font-weight:700;letter-spacing:0;
+  }
+  .logo-sub{
+    display:block;font-size:11px;font-weight:600;letter-spacing:1px;
+    color:var(--green);margin-top:-2px;
+  }
+  .search{
+    flex:1;
+    position:relative;
+  }
+  .search input{
+    width:100%;
+    padding:14px 46px 14px 18px;
+    border:1px solid var(--border);
+    border-radius:8px;
+    font-size:15px;
+    font-family:inherit;
+    outline:none;
+  }
+  .search input:focus{border-color:var(--green);}
+  .search svg{
+    position:absolute;right:16px;top:50%;transform:translateY(-50%);
+    width:18px;height:18px;color:var(--text-muted);
+  }
+  .header-actions{
+    display:flex;align-items:center;gap:28px;
+    flex-shrink:0;
+    font-size:13px;
+  }
+  .header-actions .item{display:flex;align-items:center;gap:10px;}
+  .header-actions .item svg{width:22px;height:22px;color:var(--brown-dark);flex-shrink:0;}
+  .header-actions .label{color:var(--text-muted);}
+  .header-actions .value{font-weight:700;color:var(--brown-dark);}
+
+  /* Nav */
+  nav.primary{
+    background:var(--brown);
+    color:#fff;
+  }
+  .nav-row{
+    display:flex;
+    justify-content:center;
+    gap:44px;
+    padding:16px 0;
+  }
+  .nav-row a{
+    font-size:15px;
+    font-weight:500;
+    display:flex;align-items:center;gap:6px;
+    opacity:.95;
+    transition:opacity .2s ease;
+  }
+  .nav-row a:hover{opacity:.7;}
+
+  /* Hero */
+  .hero{
+    position:relative;
+    min-height:520px;
+    display:flex;
+    align-items:center;
+    background:
+      linear-gradient(90deg, rgba(30,20,10,.55) 0%, rgba(30,20,10,.15) 55%, rgba(30,20,10,.05) 100%),
+      linear-gradient(160deg, #7a5a35, #4a3418);
+    background-size:cover;
+    background-position:center;
+    color:#fff;
+    overflow:hidden;
+  }
+  .hero-content{
+    max-width:560px;
+    padding:64px 0;
+  }
+  .hero-content h1{
+    font-size:clamp(32px, 4.2vw, 46px);
+    line-height:1.2;
+    font-weight:400;
+  }
+  .hero-content h1 strong{font-weight:800;}
+  .hero-cta{
+    display:inline-block;
+    margin-top:32px;
+    background:var(--green);
+    color:#fff;
+    font-weight:700;
+    font-size:15px;
+    padding:16px 32px;
+    border-radius:999px;
+    transition:background .2s ease;
+  }
+  .hero-cta:hover{background:var(--green-dark);}
+
+  /* Benefits strip */
+  .benefits{
+    border-bottom:1px solid var(--border);
+  }
+  .benefits-row{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+    padding:36px 0;
+  }
+  .benefit{
+    display:flex;align-items:center;gap:14px;
+  }
+  .benefit svg{width:30px;height:30px;color:var(--brown-dark);flex-shrink:0;}
+  .benefit .title{font-weight:700;font-size:14px;letter-spacing:.3px;color:var(--brown-dark);}
+  .benefit .sub{font-size:13px;color:var(--text-muted);margin-top:2px;}
+
+  /* Offers */
+  .offers{
+    background:var(--bg-muted);
+    padding:56px 0 64px;
+  }
+  .offers h2{
+    font-size:22px;
+    font-weight:700;
+    letter-spacing:.5px;
+    color:var(--brown-dark);
+    margin-bottom:28px;
+  }
+  .product-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:20px;
+  }
+  .product-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:20px 16px 18px;
+    text-align:center;
+    transition:box-shadow .2s ease, transform .2s ease;
+  }
+  .product-card:hover{
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transform:translateY(-2px);
+  }
+  .product-card .thumb{
+    width:100%;
+    aspect-ratio:1;
+    border-radius:50%;
+    border:2px solid var(--brown);
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:14px;
+    background:var(--bg-muted);
+    overflow:hidden;
+  }
+  .product-card .thumb svg{width:44%;height:44%;color:var(--brown);}
+  .product-card .name{font-size:13px;font-weight:600;color:var(--brown-dark);min-height:34px;}
+  .product-card .price{font-size:15px;font-weight:800;color:var(--green-dark);margin-top:8px;}
+
+  footer{
+    background:var(--brown-dark);
+    color:#e7ded2;
+    padding:48px 0 24px;
+    font-size:14px;
+  }
+  footer .container{
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;
+  }
+  footer .copy{opacity:.6;font-size:12px;margin-top:32px;}
+
+  @media (max-width:960px){
+    .header-row{flex-wrap:wrap;}
+    .header-actions{order:3;width:100%;justify-content:space-between;}
+    .nav-row{flex-wrap:wrap;gap:20px;}
+    .benefits-row{grid-template-columns:repeat(2,1fr);}
+    .product-grid{grid-template-columns:repeat(3,1fr);}
+  }
+  @media (max-width:560px){
+    .product-grid{grid-template-columns:repeat(2,1fr);}
+  }
+</style>
+</head>
+<body>
+
+  <div class="announcement">
+    +5% OFF no PIX ou Boleto &nbsp;|&nbsp; Entrega para todo o Brasil &nbsp;|&nbsp; Envio imediato em até 24h
+  </div>
+
+  <header class="main">
+    <div class="container header-row">
+      <a href="#" class="logo">
+        <span class="badge">TA</span>
+        <span>
+          TATU
+          <span class="logo-sub">agronegócios</span>
+        </span>
+      </a>
+
+      <div class="search">
+        <input type="text" placeholder="Pesquisar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </div>
+
+      <div class="header-actions">
+        <div class="item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <div>
+            <div class="label">Atendimento WhatsApp:</div>
+            <div class="value">(17) 99604-9769</div>
+          </div>
+        </div>
+        <div class="item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>
+          <div>
+            <div class="label">Bem-vindo(a)</div>
+            <div class="value">Entre ou Cadastre-se</div>
+          </div>
+        </div>
+        <div class="item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="primary">
+    <div class="container nav-row">
+      <a href="#">Home</a>
+      <a href="#">Fertilizantes ▾</a>
+      <a href="#">Quem Somos</a>
+      <a href="#">Contato</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Eleve ao máximo a capacidade de <strong>produtividade da sua cultura.</strong></h1>
+        <a href="#" class="hero-cta">Saiba mais</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits">
+    <div class="container benefits-row">
+      <div class="benefit">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41L11 3.83V3H3v8h.83l9.58 9.59a2 2 0 0 0 2.83 0l4.35-4.35a2 2 0 0 0 0-2.83z"/><circle cx="6.5" cy="6.5" r="1"/></svg>
+        <div>
+          <div class="title">ENTREGA PARA</div>
+          <div class="sub">TODO O BRASIL</div>
+        </div>
+      </div>
+      <div class="benefit">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        <div>
+          <div class="title">COMPRAS EM ATÉ</div>
+          <div class="sub">6X SEM JUROS</div>
+        </div>
+      </div>
+      <div class="benefit">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41L11 3.83V3H3v8h.83l9.58 9.59a2 2 0 0 0 2.83 0l4.35-4.35a2 2 0 0 0 0-2.83z"/><circle cx="6.5" cy="6.5" r="1"/></svg>
+        <div>
+          <div class="title">PIX OU BOLETO</div>
+          <div class="sub">5% DE DESCONTO*</div>
+        </div>
+      </div>
+      <div class="benefit">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+        <div>
+          <div class="title">ATENDIMENTO</div>
+          <div class="sub">WHATSAPP</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="offers">
+    <div class="container">
+      <h2>OFERTAS PARA APROVEITAR AGORA</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2h8v4l3 4v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V10l3-4z"/></svg></div>
+          <div class="name">Fertilizante Foliar Completo</div>
+          <div class="price">R$ 129,90</div>
+        </div>
+        <div class="product-card">
+          <div class="thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2h8v4l3 4v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V10l3-4z"/></svg></div>
+          <div class="name">Adubo NPK 20-05-20</div>
+          <div class="price">R$ 89,90</div>
+        </div>
+        <div class="product-card">
+          <div class="thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2h8v4l3 4v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V10l3-4z"/></svg></div>
+          <div class="name">Bioestimulante Radicular</div>
+          <div class="price">R$ 149,90</div>
+        </div>
+        <div class="product-card">
+          <div class="thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2h8v4l3 4v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V10l3-4z"/></svg></div>
+          <div class="name">Fertilizante Foliar Boro</div>
+          <div class="price">R$ 74,90</div>
+        </div>
+        <div class="product-card">
+          <div class="thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/></svg></div>
+          <div class="name">Inoculante para Sementes</div>
+          <div class="price">R$ 59,90</div>
+        </div>
+        <div class="product-card">
+          <div class="thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/></svg></div>
+          <div class="name">Defensivo Agrícola Bio</div>
+          <div class="price">R$ 199,90</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div>
+        <div class="logo" style="color:#fff;margin-bottom:12px;">
+          <span class="badge">TA</span>
+          <span>TATU<span class="logo-sub" style="color:#3fc583;">agronegócios</span></span>
+        </div>
+        <div style="opacity:.7;max-width:320px;">Insumos e fertilizantes para elevar a produtividade da sua cultura, com entrega para todo o Brasil.</div>
+      </div>
+      <div>
+        <div style="font-weight:700;margin-bottom:12px;">Atendimento</div>
+        <div style="opacity:.7;">(17) 99604-9769</div>
+        <div style="opacity:.7;">contato@tatuagronegocios.com.br</div>
+      </div>
+    </div>
+    <div class="container copy">© 2026 Tatu Agronegócios. Todos os direitos reservados.</div>
+  </footer>
+
+</body>
+</html>
