@@ -1,0 +1,110 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "core": {
+    "text-primary": {
+      "value": "#f9f9f9",
+      "role": "text-primary",
+      "name": "text-light"
+    },
+    "background": {
+      "value": "#1e1e1e",
+      "role": "background",
+      "name": "bs-body-color"
+    },
+    "surface": {
+      "value": "#333333",
+      "role": "surface",
+      "name": "text-dark"
+    },
+    "text-muted": {
+      "value": "#bfbfbf",
+      "role": "text-muted",
+      "name": "bs-btn-active-border-color"
+    },
+    "border": {
+      "value": "#555555",
+      "role": "border",
+      "name": "bs-dark-text"
+    }
+  },
+  "status": {
+    "success": {
+      "value": "#28a745",
+      "role": "success"
+    },
+    "warning": {
+      "value": "#ffc107",
+      "role": "warning",
+      "name": "bs-warning"
+    },
+    "danger": {
+      "value": "#dc3545",
+      "role": "danger",
+      "name": "bs-danger"
+    }
+  },
+  "extended": {
+    "bs-emphasis-color": {
+      "value": "#000000",
+      "role": "unknown",
+      "name": "bs-emphasis-color"
+    },
+    "bs-table-border-color": {
+      "value": "#cccccc",
+      "role": "unknown",
+      "name": "bs-table-border-color"
+    },
+    "bs-primary": {
+      "value": "#0d6efd",
+      "role": "info",
+      "name": "bs-primary"
+    },
+    "primary-green": {
+      "value": "#3b7d1c",
+      "role": "unknown",
+      "name": "primary-green"
+    },
+    "bs-secondary": {
+      "value": "#777777",
+      "role": "unknown",
+      "name": "bs-secondary"
+    },
+    "color-666666": {
+      "value": "#666666",
+      "role": "unknown"
+    },
+    "bs-success": {
+      "value": "#198754",
+      "role": "unknown",
+      "name": "bs-success"
+    },
+    "bs-border-color": {
+      "value": "#e2e2e2",
+      "role": "unknown",
+      "name": "bs-border-color"
+    },
+    "bs-info": {
+      "value": "#0dcaf0",
+      "role": "unknown",
+      "name": "bs-info"
+    },
+    "color-f4a51c": {
+      "value": "#f4a51c",
+      "role": "unknown"
+    },
+    "primary-yellow": {
+      "value": "#f7d51c",
+      "role": "unknown",
+      "name": "primary-yellow"
+    },
+    "secondary-green": {
+      "value": "#6bbf34",
+      "role": "unknown",
+      "name": "secondary-green"
+    }
+  },
+  "meta": {
+    "theme": "dark",
+    "extracted": "2026-08-25"
+  }
+}
