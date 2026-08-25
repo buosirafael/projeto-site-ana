@@ -1,0 +1,99 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "core": {
+    "text-muted": {
+      "value": "#878986",
+      "role": "text-muted"
+    },
+    "text-primary": {
+      "value": "#043038",
+      "role": "text-primary"
+    },
+    "background": {
+      "value": "#ffffff",
+      "role": "background",
+      "name": "wp--preset--color--white"
+    },
+    "border": {
+      "value": "#404a3d",
+      "role": "border"
+    },
+    "surface": {
+      "value": "#f5f0e9",
+      "role": "surface"
+    },
+    "accent": {
+      "value": "#00d084",
+      "role": "accent",
+      "name": "wp--preset--color--vivid-green-cyan"
+    }
+  },
+  "status": {
+    "success": {
+      "value": "#83c75d",
+      "role": "success"
+    },
+    "warning": {
+      "value": "#eddd5e",
+      "role": "warning"
+    },
+    "danger": {
+      "value": "#ff4539",
+      "role": "danger"
+    }
+  },
+  "extended": {
+    "color-5b8c51": {
+      "value": "#5b8c51",
+      "role": "unknown"
+    },
+    "color-c5c9c4": {
+      "value": "#c5c9c4",
+      "role": "unknown"
+    },
+    "wp--preset--color--black": {
+      "value": "#000000",
+      "role": "unknown",
+      "name": "wp--preset--color--black"
+    },
+    "color-313131": {
+      "value": "#313131",
+      "role": "unknown"
+    },
+    "wp-editor-canvas-background": {
+      "value": "#dddddd",
+      "role": "unknown",
+      "name": "wp-editor-canvas-background"
+    },
+    "color-128c7e": {
+      "value": "#128c7e",
+      "role": "unknown"
+    },
+    "wp--preset--color--vivid-cyan-blue": {
+      "value": "#0693e3",
+      "role": "info",
+      "name": "wp--preset--color--vivid-cyan-blue"
+    },
+    "wndb--color--primary": {
+      "value": "#0000ff",
+      "role": "unknown",
+      "name": "wndb--color--primary"
+    },
+    "color-25d366": {
+      "value": "#25d366",
+      "role": "unknown"
+    },
+    "color-4a4a4a": {
+      "value": "#4a4a4a",
+      "role": "unknown"
+    },
+    "color-252a24": {
+      "value": "#252a24",
+      "role": "unknown"
+    }
+  },
+  "meta": {
+    "theme": "light",
+    "extracted": "2026-08-25"
+  }
+}
