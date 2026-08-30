@@ -1,0 +1,105 @@
+{
+  "families": [
+    "Poppins"
+  ],
+  "scale": {
+    "heading-1": {
+      "fontFamily": "Poppins",
+      "fontSize": "14rem",
+      "fontWeight": "700",
+      "lineHeight": null,
+      "source": "css"
+    },
+    "heading-2": {
+      "fontFamily": "Poppins",
+      "fontSize": "9rem",
+      "fontWeight": "700",
+      "lineHeight": null,
+      "source": "css"
+    },
+    "heading-3": {
+      "fontFamily": "Poppins",
+      "fontSize": "clamp(3rem,6vw,4.6rem)",
+      "fontWeight": "700",
+      "lineHeight": null,
+      "source": "css"
+    },
+    "body": {
+      "fontFamily": "Poppins",
+      "fontSize": ".68rem",
+      "fontWeight": "400",
+      "lineHeight": null,
+      "source": "css"
+    },
+    "caption": {
+      "fontFamily": "Poppins",
+      "fontSize": ".8rem",
+      "fontWeight": "400",
+      "lineHeight": null,
+      "source": "css"
+    }
+  },
+  "fontFaces": [
+    {
+      "family": "Poppins",
+      "src": "https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLm21llEA.ttf",
+      "format": "truetype",
+      "weight": "300"
+    },
+    {
+      "family": "Poppins",
+      "src": "https://fonts.gstatic.com/s/poppins/v24/pxiGyp8kv8JHgFVrJJLedw.ttf",
+      "format": "truetype",
+      "weight": "400"
+    },
+    {
+      "family": "Poppins",
+      "src": "https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLFj_V1s.ttf",
+      "format": "truetype",
+      "weight": "200"
+    },
+    {
+      "family": "Poppins",
+      "src": "https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLDz8V1s.ttf",
+      "format": "truetype",
+      "weight": "300"
+    },
+    {
+      "family": "Poppins",
+      "src": "https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrFJA.ttf",
+      "format": "truetype",
+      "weight": "400"
+    },
+    {
+      "family": "Poppins",
+      "src": "https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9V1s.ttf",
+      "format": "truetype",
+      "weight": "500"
+    },
+    {
+      "family": "Poppins",
+      "src": "https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6V1s.ttf",
+      "format": "truetype",
+      "weight": "600"
+    },
+    {
+      "family": "Poppins",
+      "src": "https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7V1s.ttf",
+      "format": "truetype",
+      "weight": "700"
+    },
+    {
+      "family": "Poppins",
+      "src": "https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLDD4V1s.ttf",
+      "format": "truetype",
+      "weight": "800"
+    }
+  ],
+  "rules": {
+    "maxSizesPerScreen": 4,
+    "headingWeightRange": "600-700",
+    "bodyWeight": 400,
+    "lineHeightBody": 1.5,
+    "lineHeightHeading": 1.2
+  }
+}
